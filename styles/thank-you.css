@@ -1,0 +1,159 @@
+/* Thank You Page Specific Styles */
+
+.main-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-3xl) 0;
+    background: linear-gradient(135deg, var(--primary-50) 0%, var(--bg-primary) 50%, var(--neutral-50) 100%);
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+}
+
+/* Center the inner card within the container */
+.main-content .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thank-you-card {
+    background-color: var(--bg-primary);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-xl);
+    padding: var(--spacing-3xl);
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.success-icon {
+    margin: 0 auto var(--spacing-xl);
+    animation: scaleIn 0.5s ease-out 0.2s both;
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.page-title {
+    font-size: var(--font-size-4xl);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-md);
+    background: linear-gradient(135deg, var(--primary-600), var(--primary-900));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.page-subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.confirmation-details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    margin: var(--spacing-2xl) 0;
+    padding: var(--spacing-xl) 0;
+    border-top: 1px solid var(--neutral-200);
+    border-bottom: 1px solid var(--neutral-200);
+}
+
+.detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-lg);
+    text-align: left;
+    padding: var(--spacing-md);
+    border-radius: var(--radius-lg);
+    transition: background-color var(--transition-fast);
+}
+
+.detail-item:hover {
+    background-color: var(--neutral-50);
+}
+
+.detail-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, var(--primary-100), var(--primary-50));
+    color: var(--primary-600);
+}
+
+.detail-content {
+    flex: 1;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-xs);
+}
+
+.detail-text {
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* action buttons removed per request */
+
+@media (max-width: 768px) {
+    .main-content {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .thank-you-card {
+        padding: var(--spacing-xl);
+        margin: var(--spacing-md);
+    }
+    
+    .page-title {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .confirmation-details {
+        gap: var(--spacing-md);
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .detail-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: var(--spacing-sm);
+    }
+    
+    /* action buttons removed per request */
+}
+
